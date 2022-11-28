@@ -1,0 +1,29 @@
+VIEWS.py
+
+Quem tem o arquivo views são as aplicações, é nela (views) que a gente programa para que o mvc ou mtv do django funcione.
+Uma view django é uma função em python, que recebe um parâmetro (request) e retorna uma renderização do request com um templete.
+
+O que é o MVC?
+O MVC é uma sigla do termo em inglês Model (modelo) View (visão)
+e Controller (Controle) que facilita a troca de informações entre a interface do usuário aos dados no banco,
+fazendo com que as respostas sejam mais rápidas e dinâmicas.
+
+O que é o MTV?
+A definição de Model é a mesma para a arquitetura MVC e MTV, que é o arquivo que contém a estrutura lógica do projeto
+e funciona como um intermediário para manipular dados entre o banco de dados e a View.
+Dentro do arquivo Model é determinado quais tipos de dados, e como serão armazenados dentro do seu banco e,
+como serão exibidos quando solicitados pela View.
+
+OBS: Em settings é necessário colocar o DEBUG como false, para que ele procure em views funções,
+como por exemplo uma função index, para retornar o index.html
+
+
+EXEMPLO:
+
+def index(request):
+    return render(request, 'index.html')
+
+
+def contact(request):
+    return render(request, 'contact.html')
+

@@ -1,0 +1,6 @@
+URLS.py
+
+Depois que criamos as views, precisamos criar as rotas para essas views. As rotas são responsáveis do arquivo URLS.py,
+o arquivo URLS é padrão do projeto e não do app.
+
+Pórem é uma boa prática criar o arquivos URLS em cada app diferente que tivermos.
