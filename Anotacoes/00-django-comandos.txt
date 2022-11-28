@@ -1,0 +1,18 @@
+Instalando e criando um projeto no django:
+
+OBS: Quando vamos criar comandos de gerenciamento dos projetos django, temos que executar os comandos no mesmo diretório onde está o
+arquivo manage.py.
+
+	*Para instalar o django -> pip install django
+	*Para criar o primeiro projeto com django -> django-admin startproject nome do projeto .
+	*Para criar uma aplicação -> django-admin startapp nome da aplicação
+		Para cada aplicação que criei é necessário ir em settings e na parte de INSTALLED_APPS e adicionar o nome da aplicação.
+	*Para iniciar o projeto django -> python manage.py runserver
+
+
+
+
+
+
+
+

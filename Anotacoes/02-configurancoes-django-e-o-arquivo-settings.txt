@@ -1,0 +1,30 @@
+SETTINGS.py
+
+Em settings.py na aba TEMPLATES foi adicionado em DIRS a string: 'templates', significa que dentro da aplicação CORE terá um diretório para colocar os templates lá.
+Os templates são as páginas HTML por exemplo.
+
+
+EXEMPLO:
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': ['templates'], -> AQUI FOI MODIFICADO COM A STRING TEMPLATES
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+É possível mudar também a "língua da página web", normalmente vem por padrão 'en-us'.
+Podemos mudar para pt-br
+
+EXEMPLO:
+
+LANGUAGE_CODE = 'pt-br'
