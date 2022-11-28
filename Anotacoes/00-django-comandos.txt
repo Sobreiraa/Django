@@ -6,8 +6,11 @@ arquivo manage.py.
 	*Para instalar o django -> pip install django
 	*Para criar o primeiro projeto com django -> django-admin startproject nome do projeto .
 	*Para criar uma aplicação -> django-admin startapp nome da aplicação
-		Para cada aplicação que criei é necessário ir em settings e na parte de INSTALLED_APPS e adicionar o nome da aplicação.
+		Para cada aplicação que criar é necessário ir em settings/INSTALLED_APPS e adicionar o nome da aplicação.
 	*Para iniciar o projeto django -> python manage.py runserver
+	*Para criar migrations -> python manage.py makemigrations
+	*Para aplicar as migrations -> python manage.py migrate
+	*Para criar um user no admin -> python manage.py createsuperuser
 
 
 

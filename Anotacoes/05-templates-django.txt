@@ -1,0 +1,40 @@
+TEMPLATES
+
+Configuramos o settings.py em TEMPLATES/DIRS e colocamos a string 'templates', significa que vamos criar a pasta templates
+para criar os templates das nosssas views index e contact.
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': ['templates'], #Aqui foi definido
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+Depois crie uma pasta dentro da aplicação com nome TEMPLATES e crie os arquivos index.html e contact.html e seu template estára vísivel.
+Podemos ir no arquivo views.py e na view index podemos criar uma váriavel q será um dicionário para adicionarmos depois no arquivo index.html
+
+EXEMPLO:
+~
+VIEWS.PY
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def index(request): # Criando a view INDEX
+    context = {
+        'curso': 'Programação web com Django Framework',
+        'outro': 'Django é incrível!'
+    }
+    return render(request, 'index.html', context)
+
+
+INDEX.HTML
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ <h2>{{ curso }}</h2>
+ <p>{{ outro }}</p>

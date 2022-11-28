@@ -3,4 +3,33 @@ URLS.py
 Depois que criamos as views, precisamos criar as rotas para essas views. As rotas são responsáveis do arquivo URLS.py,
 o arquivo URLS é padrão do projeto e não do app.
 
-Pórem é uma boa prática criar o arquivos URLS em cada app diferente que tivermos.
+Se tivermos várias aplicações não seria legal colocar todasa as rotas nao arquivo URL principal,
+é uma boa prática criar o arquivos URLS em cada app diferente que tivermos.
+
+
+Importe o include no arquivo URLS do PROJETO e depois crie um arquivo URLS na pasta da APLICAÇÃO e configure as rotas.
+
+EXEMPLO:
+
+URLS.PY DO PROJETO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+from django.contrib import admin
+from django.urls import path, include
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('core.urls')) # IMPORTANDO O INCLUDE
+]
+
+
+
+URLS.PY DA APLICAÇÃO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+from django.urls import path
+from .views import index, contact
+
+urlpatterns = [
+    path('', index),
+    path('contact', contact),
+]

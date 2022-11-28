@@ -1,0 +1,40 @@
+MODELS.py
+
+
+Models é um modelo, um modelo de dados. Os modelos definem a estrutura dos dados armazenados, incluindo os tipos de campos 
+e possivelmente também o seu tamanho máximo, valores default, opções de listas de seleção, texto de ajuda para documentos, 
+texto de etiquetas para formulários, etc. do banco de dados 
+você pode escolher um tipo de banco como parte das configurações do seu projeto. 
+Uma vez que você escolheu qual banco será utilizado, você precisa conversar diretamente com ele. 
+Você somente escreve a estrutura do seu modelo e outros códigos, e o Django faz todo o trabalho sujo de comunicação com o banco para você.
+
+EXEMPLO:
+
+No arquivo models, crie os modelos como se fosse classes em python.
+
+class Produto(models.Model):
+    nome = models.CharField('Nome', max_length=100)
+    preco = models.DecimalField('Preço', decimal_places=2, max_digits=8)
+    estoque = models.IntegerField('Quantidade em Estoque')
+
+
+class Cliente(models.Model):
+    nome = models.CharField('Nome', max_length=100)
+    sobrenome = models.CharField('Sobrenome', max_length=100)
+    email = models.EmailField('E-mail', max_length=100)
+
+OBS: Para que funcione os modelos, é necessário que tenha configurado em SETTINGS/INSTALLED_APPS a aplicação.
+
+MIGRATIONS
+
+As migrações são a maneira do Django de propagar as alterações feitas em seus modelos (adicionar um campo, excluir um modelo, etc.) 
+em seu esquema de banco de dados. Eles são projetados para serem principalmente automáticos, 
+mas você precisará saber quando fazer migrações, quando executá-los e os problemas comuns que podem ocorrer.
+
+Os Comandos:
+Existem vários comandos que você usará para interagir com as migrações e o tratamento do esquema de banco de dados do Django:
+
+	*migrate, que é responsável por aplicar e cancelar a aplicação de migrações.
+	*makemigrations, que é responsável por criar novas migrações com base nas alterações feitas em seus modelos.
+	*sqlmigrate, que exibe as instruções SQL para uma migração.
+	*showmigrations, que lista as migrações de um projeto e seus status.
