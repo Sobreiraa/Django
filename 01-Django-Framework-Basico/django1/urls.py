@@ -18,6 +18,6 @@ from django.urls import path, include # Importando o include
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls), # Não é recomendado usar o caminho 'admin/' como rota principal por motivos de segurança
     path('', include('core.urls')) # Usando o include para as rotas
 ]
