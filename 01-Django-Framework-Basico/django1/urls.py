@@ -16,8 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include # Importando o include
 
+from django.conf.urls import handler404, handler500 # Importando error página não encontrada
+
+from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls), # Não é recomendado usar o caminho 'admin/' como rota principal por motivos de segurança
     path('', include('core.urls')) # Usando o include para as rotas
 ]
+
+handler404 = views.error404
+handler500 = views.error500
