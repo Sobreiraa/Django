@@ -4,9 +4,10 @@ Criando um projeto com SQLite3 e sua estrutura:
 	
 	*manage.py - Arquvio que vamos usar para executar comando do framework django.
 	*__init__.py - Transforma um diretório em um pacote no python.
+	*asgi.py - Usado para fazer ligação entre o django e um servidor web.
 	*settings.py - Configurações django para o seu projeto.
-	*urls.py - Arquivo de rotas
-	*wsgi.py - Arquivo exclusivo para nossas publicações
+	*urls.py - Arquivo de rotas.
+	*wsgi.py - Arquivo exclusivo para nossas publicações.
 
 	MIGRATIONS
 	
