@@ -4,7 +4,10 @@ from django.http import HttpResponse
 # Create your views here.
 def home(request): #HTTP REQUEST
     # HTTP RESPONSE
-    return HttpResponse('Home') # Retornando um HTTP RESPONSE
+    context = {
+        'name': 'Matheus Sobreira'
+    } # Contexto que pode ser mandado para a função render
+    return render(request, 'recipes/home.html', context) # Retornando uma renderização de uma página html
 
 
 def contato(request): #HTTP REQUEST
