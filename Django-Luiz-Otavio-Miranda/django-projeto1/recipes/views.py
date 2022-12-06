@@ -7,14 +7,5 @@ def home(request): #HTTP REQUEST
     context = {
         'name': 'Matheus Sobreira'
     } # Contexto que pode ser mandado para a função render
-    return render(request, 'recipes/home.html', context) # Retornando uma renderização de uma página html
+    return render(request, 'recipes/pages/home.html', context) # Retornando uma renderização de uma página html
 
-
-def contato(request): #HTTP REQUEST
-    # HTTP RESPONSE
-    return HttpResponse('Contato') # Retornando um HTTP RESPONSE
-
-
-def sobre(request): #HTTP REQUEST
-    # HTTP RESPONSE
-    return HttpResponse('Sobre') # Retornando um HTTP RESPONSE
