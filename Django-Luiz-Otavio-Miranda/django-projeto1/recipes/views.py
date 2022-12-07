@@ -1,14 +1,18 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from utils.recipes.factory import make_recipe
 
 # Create your views here.
 def home(request): #HTTP REQUEST
     # HTTP RESPONSE
-    # context = {
-       # 'name': 'Matheus Sobreira'
-    # }  Contexto que pode ser mandado para a função render
-    return render(request, 'recipes/pages/home.html') # Retornando uma renderização de uma página html
+    context = {
+       'recipes': [make_recipe() for _ in range(10)],
+    } 
+    return render(request, 'recipes/pages/home.html', context) # Retornando uma renderização de uma página html
 
 
 def recipes(request, id):
-    return render(request, 'recipes/pages/recipe-view.html')
+    context = {
+        'recipe': make_recipe(),
+        'is_detail_page': True,
+    }
+    return render(request, 'recipes/pages/recipe-view.html', context)

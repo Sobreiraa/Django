@@ -157,6 +157,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .recipe-list-item {
     max-width: 64rem;
+    height: fit-content;
 }
 
 .recipe-list-item:hover {
@@ -167,6 +168,11 @@ h1, h2, h3, h4, h5, h6 {
 .recipe-title-container {
     padding: var(--spacing-gutter-medium);
     padding-bottom: 2rem;
+}
+
+.recipe-title-container a{
+    text-decoration: none;
+    color: var(--color-primary-dark);
 }
 
 .recipe-author {
@@ -230,6 +236,10 @@ h1, h2, h3, h4, h5, h6 {
 .main-content-detail .recipe-list-item:hover {
     transform: scale(1);
     box-shadow: -0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.preparation-steps {
+    padding: var(--spacing-gutter-medium);
 }
 
 .main-footer {
