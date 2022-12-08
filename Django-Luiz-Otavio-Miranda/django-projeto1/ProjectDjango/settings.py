@@ -125,6 +125,9 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = BASE_DIR / 'static' # Criando uma pasta com todos os arquivos estáticos do projeto, incluindo os globais e estáticos 
 
+MEDIA_URL = 'media/' #Aqui é onde será salvo os arquivos enviados pelos usuários 
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
