@@ -1,8 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse, resolve
 from recipes import views
-from recipes.models import Category, Recipe
-from django.contrib.auth.models import User
 
 
 # Create your tests here.
@@ -27,4 +25,4 @@ class RecipeSearchViewsTest(TestCase):
             'Search for Teste',
             response.content.decode('utf-8')
         )
-        
+    
