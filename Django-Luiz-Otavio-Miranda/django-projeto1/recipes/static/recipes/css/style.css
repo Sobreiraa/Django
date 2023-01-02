@@ -1,6 +1,6 @@
 :root {
     --color-primary: #269fe6;
-    --color-primary-hover: #2086c2;
+    --color-primary-hover: #055685;
     --color-primary-dark: #13141f;
     --color-primary-dark-hover: #212336;
     --color-primary-light: #d4ecfa;
@@ -259,6 +259,34 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-footer a:hover {
     filter: brightness(.8);
+}
+
+.pagination .page-content {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem 0.5rem;
+}
+
+.pagination .page-item {
+    text-decoration: none;
+    background: var(--color-gray-3);
+    padding: 0.5rem 1rem;
+}
+
+.pagination .page-link {
+    text-decoration: none;
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.pagination .page-link:hover {
+    text-decoration: none;
+    background: var(--color-primary-hover);
+    color: var(--color-white);
+}
+
+.pagination .page-current {
+    background: var(--color-primary-dark);
 }
 
 /* Generics */
