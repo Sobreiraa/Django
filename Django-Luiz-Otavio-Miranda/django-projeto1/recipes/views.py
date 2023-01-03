@@ -3,6 +3,7 @@ from django.core.paginator import Paginator
 from recipes.models import Recipe
 from django.http import Http404
 from utils.pagination import make_pagination
+from django.contrib import messages
 
 import os
 
@@ -16,6 +17,10 @@ def home(request): #HTTP REQUEST
     ).order_by('-id')
 
     page_obj, pagination_range = make_pagination(request, recipes, PER_PAGE)
+
+    messages.error(request, 'Que triste, aconteceu um erro.')
+    messages.error(request, 'Que triste, aconteceu um erro.')
+    messages.error(request, 'Que triste, aconteceu um erro.')
     
     context = {
        'recipes': page_obj,
