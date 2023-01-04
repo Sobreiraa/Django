@@ -19,8 +19,6 @@ def home(request): #HTTP REQUEST
     page_obj, pagination_range = make_pagination(request, recipes, PER_PAGE)
 
     messages.error(request, 'Que triste, aconteceu um erro.')
-    messages.error(request, 'Que triste, aconteceu um erro.')
-    messages.error(request, 'Que triste, aconteceu um erro.')
     
     context = {
        'recipes': page_obj,
